@@ -1,49 +1,120 @@
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f4f4;
-text-align:center;
+* {
+    box-sizing: border-box;
 }
 
-header{
-background:#4CAF50;
-color:white;
-padding:20px;
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #f0f2f5; 
+    color: #333;
+    line-height: 1.6;
 }
 
-.chat{
-max-width:500px;
-margin:30px auto;
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+header {
+    background: #1a1a1a; 
+    color: white;
+    padding: 3rem 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.messages{
-height:300px;
-overflow-y:auto;
-border:1px solid #ddd;
-padding:10px;
-margin-bottom:10px;
-text-align:left;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
 }
 
-.input-area{
-display:flex;
+header p {
+    opacity: 0.8;
+    font-weight: 300;
 }
 
-input{
-flex:1;
-padding:10px;
-font-size:16px;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: -30px auto 40px auto; 
+    padding: 0 20px;
 }
 
-button{
-padding:10px 20px;
-border:none;
-background:#4CAF50;
-color:white;
-cursor:pointer;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+
+.chat {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden; 
+}
+
+.messages {
+    height: 400px;
+    overflow-y: auto;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 5. Área de input mejorada */
+.input-area {
+    display: flex;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
 }
